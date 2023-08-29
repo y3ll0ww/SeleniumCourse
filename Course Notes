@@ -1,10 +1,43 @@
 Prerequisites:
 1) Install Java
+2) Install IntelliJ
+	- Maven project
+	- Select Java openjdk
 
 In lesson:
-1) Initial folder structure
-2) Install Selenium
-    - Google: "selenium java download"
-    - Click link: "https://www.selenium.dev/downloads/"
-    - Click on the Java download
-    - Project Structure -> Modules -> + -> JARs or Directories ->
+1) Install Selenium / cucumber / junit
+    - Add to pom.xml:
+            <dependencies>
+                <dependency>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>selenium-java</artifactId>
+                    <version>4.5.0</version>
+                </dependency>
+                <dependency>
+                    <groupId>io.cucumber</groupId>
+                    <artifactId>cucumber-java</artifactId>
+                    <version>7.8.0</version>
+                </dependency>
+                <dependency>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                    <version>4.13.2</version>
+                    <scope>test</scope>
+                </dependency>
+                <dependency>
+                    <groupId>io.cucumber</groupId>
+                    <artifactId>cucumber-junit</artifactId>
+                    <version>7.8.0</version>
+                    <scope>test</scope>
+                </dependency>
+            </dependencies>
+2) Initial folder structure
+    - src/test/
+        + resources (Maven source directories: resources)
+    - src/test/resources
+        + drivers
+        + features
+3) Google "chrome driver"
+4) Click link "https://chromedriver.chromium.org/downloads"
+5) CLick latest -> download "chromedriver_win32.zip"
+6) Extract "chromedriver.exe" to src/test/resources/drivers
