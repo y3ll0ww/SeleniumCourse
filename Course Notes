@@ -1,0 +1,10 @@
+Prerequisites:
+1) Install Java
+
+In lesson:
+1) Initial folder structure
+2) Install Selenium
+    - Google: "selenium java download"
+    - Click link: "https://www.selenium.dev/downloads/"
+    - Click on the Java download
+    - Project Structure -> Modules -> + -> JARs or Directories ->
