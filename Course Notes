@@ -1,43 +1,24 @@
-Prerequisites:
-1) Install Java
-2) Install IntelliJ
-	- Maven project
-	- Select Java openjdk
+Added Main in "src/test/java"
+    1) Initial:
+       import org.openqa.selenium.WebDriver;
+       import org.openqa.selenium.chrome.ChromeDriver;
 
-In lesson:
-1) Install Selenium / cucumber / junit
-    - Add to pom.xml:
-            <dependencies>
-                <dependency>
-                    <groupId>org.seleniumhq.selenium</groupId>
-                    <artifactId>selenium-java</artifactId>
-                    <version>4.5.0</version>
-                </dependency>
-                <dependency>
-                    <groupId>io.cucumber</groupId>
-                    <artifactId>cucumber-java</artifactId>
-                    <version>7.8.0</version>
-                </dependency>
-                <dependency>
-                    <groupId>junit</groupId>
-                    <artifactId>junit</artifactId>
-                    <version>4.13.2</version>
-                    <scope>test</scope>
-                </dependency>
-                <dependency>
-                    <groupId>io.cucumber</groupId>
-                    <artifactId>cucumber-junit</artifactId>
-                    <version>7.8.0</version>
-                    <scope>test</scope>
-                </dependency>
-            </dependencies>
-2) Initial folder structure
-    - src/test/
-        + resources (Maven source directories: resources)
-    - src/test/resources
-        + drivers
-        + features
-3) Google "chrome driver"
-4) Click link "https://chromedriver.chromium.org/downloads"
-5) CLick latest -> download "chromedriver_win32.zip"
-6) Extract "chromedriver.exe" to src/test/resources/drivers
+       public class Main {
+           public static WebDriver driver = new ChromeDriver();
+
+           public static void main(String[] args){
+               driver.get("http://www.google.nl");
+           }
+       }
+
+
+
+
+
+
+wait = new FluentWait<>(driver) ...:
+
+This creates a FluentWait instance. Fluent waits are a type of explicit wait in Selenium that allow you to specify more advanced conditions for waiting.
+The withTimeout method sets the maximum time the fluent wait should wait for a certain condition to be satisfied.
+The pollingEvery method specifies the interval at which the fluent wait will check for the condition.
+The ignoring method specifies exceptions to ignore while waiting. In your case, it's set to ignore NoSuchElementException which is a common exception that occurs when an element is not immediately found.
